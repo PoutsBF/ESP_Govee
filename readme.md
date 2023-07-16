@@ -7,6 +7,9 @@ Utilisation d'un module XIAO ESP32C3 (risk V)
 
 ## Sources
 
+Modification de la partition (pour utilisation BLE & serveur web)
+<https://docs.platformio.org/en/latest/platforms/espressif32.html#partition-tables>
+
 Contenu de la trame :
 <https://github.com/Home-Is-Where-You-Hang-Your-Hack/sensor.goveetemp_bt_hci>
 
