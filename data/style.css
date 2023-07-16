@@ -1,0 +1,106 @@
+body{
+    background-color: gray;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "dv1 dv2"
+        "dv3 dv4"
+        "dv5 dv6"
+        "dv7 dv8";
+}
+
+.container * {
+        border: 1px solid black;
+}
+
+.dv1 {
+    grid-area: dv1;
+}
+
+.dv2 {
+    grid-area: dv2;
+}
+
+.dv3 {
+    grid-area: dv3;
+}
+
+.dv4 {
+    grid-area: dv4;
+}
+
+.dv5 {
+    grid-area: dv5;
+}
+
+.dv6 {
+    grid-area: dv6;
+}
+
+.dv7 {
+    grid-area: dv7;
+}
+
+.dv8 {
+    grid-area: dv8;
+}
+
+
+html,
+body,
+.container {
+    height: 100%;
+    margin: 0;
+}
+
+.device {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". batt"
+        "piece piece"
+        "date date"
+        "temperature hygrometrie";
+}
+
+.device * {
+    border: none;
+}
+
+.batt {
+    grid-area: batt;
+}
+
+.piece {
+    grid-area: piece;
+}
+
+.date {
+    grid-area: date;
+}
+
+.temperature {
+    grid-area: temperature;
+}
+
+.hygrometrie {
+    grid-area: hygrometrie;
+}
+
+
+html,
+body,
+.device {
+    height: 100%;
+    margin: 0;
+}
+
