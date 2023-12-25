@@ -1,5 +1,6 @@
 #include <BLEobjet.h>
 
+
 long getLongFromByteArray(byte *bytes, int position)
 {
     long result = bytes[position + 1] * 256 + bytes[position];
@@ -76,12 +77,12 @@ void BLEobjet::onResult(BLEAdvertisedDevice advertisedDevice)
             {
                 if (govee[i].m_adresse->equals(adresse))
                 {
-                    Serial.println(govee[i].m_nom);
+                    Serial.print(govee[i].m_nom);
                     govee[i].temperature = temperature;
                     govee[i].hygrometrie = humidite;
                     govee[i].batterie = battery;
                     govee[i].rssi = rssi;
-                    Serial.printf("   %.1f°C %.0f%HR batt : %d/100 rssi : %ddB\n", temperature, humidite, battery, rssi);
+                    Serial.printf("   %.1f°C %.0f%%HR batt : %d%% rssi : %ddB\n", temperature, humidite, battery, rssi);
                 }
             }
         }
@@ -131,4 +132,6 @@ void BLEobjet::scan()
     BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
     Serial.printf("Nettoyage scan...\n");
     pBLEScan->clearResults();
+
+    
 }

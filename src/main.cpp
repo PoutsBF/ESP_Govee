@@ -60,7 +60,12 @@ void loop()
     
     bleObjet.scan();
 
+    u8x8.print("fin.");
+
     delay(1000 * 60 * 60 * 4);        // toutes les milli x secondes x minutes x 4 heures
+
+    
+
 }
 
 void print_wakeup_reason()
@@ -78,4 +83,6 @@ void print_wakeup_reason()
         case ESP_SLEEP_WAKEUP_ULP: Serial.println("Wakeup caused by ULP program"); break;
         default: Serial.printf("Wakeup was not caused by deep sleep: %d\n", wakeup_reason); break;
     }
+
+    
 }
